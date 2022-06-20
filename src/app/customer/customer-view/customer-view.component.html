@@ -1,0 +1,32 @@
+
+
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Customer UserName</th>
+            <th>Customer PassWord</th>
+            <th>Customer FullName</th>
+            <th>Customer Phone Number</th>
+            <th>Customer Email</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of CustomersList">
+            <td>{{dataItem.customerUserName}}</td>
+            <td>{{dataItem.customerPassword}}</td>
+            <td>{{dataItem.customerFullName}}</td>
+            <td>{{dataItem.customerPhoneNumber}}</td>
+            <td>{{dataItem.customerEmail}}</td>
+            <td>
+                <button type = "button" class = "btn btn-light mr-1">
+                    Edit
+                </button>
+                <button type = "button" class = "btn btn-light mr-1">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
