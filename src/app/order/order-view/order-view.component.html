@@ -1,1 +1,42 @@
-<p>order-view works!</p>
+
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Customer Full Name</th>
+      <th>No. Details</th>
+      <th>Timestamp</th>
+      <th>Address</th>
+      <th>QR Code Key</th>
+      <th>Robot key</th>
+      <th>Total Price</th>
+      <th>Status</th>
+      <th>Tracking</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of OrdersList">
+      <td>{{dataItem.orderId}}</td>
+      <td>{{dataItem.customerFullName}}</td>
+      <td>{{dataItem.numberOfDetails}}</td>
+      <td>{{dataItem.orderTimestamp}}</td>
+      <td>{{dataItem.orderAddress}}</td>
+      <td>{{dataItem.orderQrCode}}</td>
+      <td>{{dataItem.orderRobot}}</td>
+      <td>{{dataItem.totalPrice}}$</td>
+      <td>{{dataItem.orderStatus}}</td>
+      <td>{{dataItem.orderTracking}}</td>
+      <td>
+        <button type="button" class="btn btn-light mr-1">
+          Edit
+        </button>
+        <button type="button" class="btn btn-light mr-1">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

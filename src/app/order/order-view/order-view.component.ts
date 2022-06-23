@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../../shared.service';
 
 @Component({
   selector: 'app-order-view',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: SharedService) { }
+
+  OrdersList: any = []
 
   ngOnInit(): void {
+    this.refreshOrdersList();
+  }
+
+  refreshOrdersList() {
+    this.service.getOrdersList().subscribe(data =>
+      this.OrdersList = data);
   }
 
 }

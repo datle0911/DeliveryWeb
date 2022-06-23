@@ -14,7 +14,8 @@ export class SharedService {
   }
 
   getOrdersList():Observable<any[]>{
-    return this.http.get<any>(this.ApiUrl + 'orders');
+    var queryRequest = true;
+    return this.http.get<any>(this.ApiUrl + 'orders?minimal=' + queryRequest);
   }
 
   getProductsList():Observable<any[]>{
